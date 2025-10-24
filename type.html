@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Speed Test</title>
+  <link href="./st.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <div id="plate" >
+      <img src="./Logo.png">
+  </div>
+  </header>
+  <div class="main-content">
+    <div class="test-header">
+      <h1 class="fast">Prove You are the <span>Fastest</span></h1>
+      <div id="timer"> 
+        <div id="highwpm"><span id="trophy"><i class="fa-solid fa-trophy"></i></span><p>Highest WPM: <span id="hw">0</span></p></div>
+        <span id="timerr">60s</span> 
+      </div> 
+    </div>
+    <div class="typing-container">
+    <div id="para"></div>
+    <textarea id="typed" placeholder="" spellcheck="false"></textarea>
+</div>
+  <div id="resultPopup" class="popupoverlay">
+  <div class="popupbox">
+    <h2 id="resu">RESULTS</h2>
+    <hr>
+    <div id="words">
+    <p>Accuracy <br><span id="acc"></span></p>
+    <p>WPM<br> <span id="wpm"></span></p>
+    <p>Errors<br> <span id="err"></span></p>
+    
+    </div>
+        <button id="rbt">retry</button>
+          <button id="okBtn">OK</button>
+
+  </div>
+  
+</div>
+  <br>
+  <script src="typ.js">
+
+  </script>
+</body>
+</html>

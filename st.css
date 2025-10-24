@@ -1,0 +1,206 @@
+/* General Body and Font Setup */
+body {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* Header Section (Heading + Timer) */
+.test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.fast {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: left;
+}
+
+.fast span {
+    color: #00BBFF;
+}
+
+#timer {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 0;
+    text-align: right;
+}
+
+#highwpm {
+    font-size: 0.6em; /* Relative to timer's font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 280px;
+    height: 50px;
+    color: #00BBFF;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+}
+#highwpm p {
+    margin: 0;
+}
+#trophy {
+    margin-right: 15px;
+    color: white;
+}
+
+/* Typing Box Section */
+.typing-container {
+    display: grid; /* Use Grid to perfectly overlay elements */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    min-height: 250px;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.typing-container::-webkit-scrollbar {
+    display: none;
+}
+
+#para, #typed {
+    /* This makes both elements occupy the exact same space */
+    grid-column: 1;
+    grid-row: 1;
+
+    /* Shared styling for perfect text alignment */
+    padding: 25px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.6em;
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Important for grid layout */
+}
+
+#para {
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none; /* Allows clicks to go through to the textarea */
+    z-index: 1;
+}
+
+#typed {
+    background: transparent;
+    color: transparent; /* This is the main fix! Hides the actual text */
+    border: none;
+    resize: none;
+    outline: none;
+    z-index: 2; /* Sits on top of the #para div */
+    caret-color: #00BBFF; /* Makes the typing cursor visible */
+}
+
+/* Character Highlighting */
+.correct {
+    color: #00BBFF;
+}
+.wrong {
+    color: #ff6b6b;
+    text-decoration: underline;
+}
+
+
+
+/* Results Popup */
+.popupoverlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+.popupbox {
+    background: #2a2a4a;
+    border-radius: 8px;
+    text-align: center;
+    width: 700px;
+    border: solid 1px rgba(255, 255, 255, 0.15);
+    padding: 20px 40px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.4);
+}
+#resu {
+    color: #00BBFF;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+#words {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 30px 0 40px 0;
+}
+#words p {
+    margin: 0;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.7);
+}
+#words span {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #e0e0e0;
+    display: block;
+    margin-top: 5px;
+}
+#rbt, #okBtn {
+    margin: 0 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid 1px #00BBFF;
+    background-color: #00BBFF;
+    color: #1a1a2e;
+    width: 150px;
+    height: 40px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+#rbt:hover, #okBtn:hover {
+    background-color: transparent;
+    color: #00BBFF;
+    transform: scale(1.05);
+}
+
+/* Original Header (Logo) */
+#plate {
+    height: 80px;
+    background-color: #1a1a2e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#plate img {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    width: 200px;
+    height: 100%;
+    object-fit: contain;
+    object-position: left;
+}
