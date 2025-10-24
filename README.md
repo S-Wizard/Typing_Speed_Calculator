@@ -25,6 +25,7 @@ This program calculates typing results and prints **JSON** output.
 ### Compile & Run
 
 ```bash
-gcc typing_speed_random.c -o typing_logic
+gcc typing.c -o typing_logic
 chmod +x typing_logic
 ./typing_logic "Your typed text" 60
+
